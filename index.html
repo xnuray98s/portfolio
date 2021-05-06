@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/3ca5b7ab53.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .html {
+        scroll-behavior: smooth;
+        overflow: hidden;
+      }
+      .body {
+        background-color: #f7f7f7;
+        overflow: hidden;
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+      #circle1 {
+        position: absolute;
+        z-index: -111;
+        top: 60%;
+        right: 80%;
+        width: 700px;
+        height: 500px;
+        background: #093028; /* fallback for old browsers */
+        background: -webkit-linear-gradient(
+          to right,
+          #237a57,
+          #093028
+        ); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(
+          to right,
+          #237a57,
+          #093028
+        ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        box-shadow: 40px 10px 80px #237a57, 0px 10px 80px #093028,
+          -40px 10px 80px #237a57;
+        filter: blur(20px);
+        -webkit-filter: blur(20px);
+        border-radius: 50%;
+        opacity: 15%;
+      }
+      #circle2 {
+        position: absolute;
+        z-index: -111;
+        top: 5%;
+        left: 90%;
+        width: 700px;
+        height: 500px;
+        background: #f46b45; /* fallback for old browsers */
+        background: -webkit-linear-gradient(
+          to right,
+          #eea849,
+          #f46b45
+        ); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(
+          to right,
+          #eea849,
+          #f46b45
+        ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        box-shadow: 40px 10px 80px #eea849, 0px 10px 80px #f46b45,
+          -40px 10px 80px #eea849;
+        filter: blur(20px);
+        -webkit-filter: blur(20px);
+        border-radius: 50%;
+        opacity: 15%;
+      }
+      .browser {
+        width: 628px;
+        height: 807px;
+        border-radius: 3%;
+        background: #093028; /* fallback for old browsers */
+        background: -webkit-linear-gradient(
+          to bottom,
+          #237a57,
+          #093028
+        ); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(
+          to bottom,
+          #237a57,
+          #093028
+        ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      }
+      .waves {
+        position: absolute;
+        width: 100%;
+        height: 15vh;
+        top: 100%;
+        left: 0%;
+        margin-bottom: -7px; /*Fix for safari gap*/
+        min-height: 100px;
+        max-height: 150px;
+      }
+      .parallax > use {
+        animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+      }
+      .parallax > use:nth-child(1) {
+        animation-delay: -2s;
+        animation-duration: 7s;
+      }
+      .parallax > use:nth-child(2) {
+        animation-delay: -3s;
+        animation-duration: 10s;
+      }
+      .parallax > use:nth-child(3) {
+        animation-delay: -4s;
+        animation-duration: 13s;
+      }
+      .parallax > use:nth-child(4) {
+        animation-delay: -5s;
+        animation-duration: 20s;
+      }
+      @keyframes move-forever {
+        0% {
+          transform: translate3d(-90px, 0, 0);
+        }
+        100% {
+          transform: translate3d(85px, 0, 0);
+        }
+      }
+      /*Shrinking for mobile*/
+      @media (max-width: 768px) {
+        .waves {
+          height: 40px;
+          min-height: 40px;
+        }
+        .content {
+          height: 30vh;
+        }
+        h1 {
+          font-size: 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid ms-5 me-5">
+      <div class="row align-items-center gx-4 mt-5">
+        <div class="col ms-5">
+          <h1 class="display-1 fw-bold" style="color: #e8906d">
+            Nourah Almutairi
+          </h1>
+          <p>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+            et ea rebum. Stet clita kasd gubergren, no sea.
+          </p>
+          <a
+            class="btn btn-warning"
+            href="#carouselExampleCaptions"
+            role="button"
+            >See my works</a
+          >
+          <a class="btn btn-warning" href="#contact" role="button"
+            >Contact me</a
+          >
+        </div>
+        <div class="col ms-5">
+          <div
+            class="control mt-1 ms-3"
+            style="position: absolute; z-index: 99"
+          >
+            <svg
+              id="Windows_x_Window_Controls_Toolbar_-_Default_Aqua"
+              data-name="Windows / x / Window Controls / Toolbar - Default / Aqua"
+              xmlns="http://www.w3.org/2000/svg"
+              width="76"
+              height="18"
+              viewBox="0 0 76 18"
+            >
+              <rect
+                id="Background"
+                width="76"
+                height="18"
+                fill="none"
+                opacity="0"
+              />
+              <g
+                id="Zoom"
+                transform="translate(58)"
+                fill="#2acb42"
+                stroke="#1bac2c"
+                stroke-miterlimit="10"
+                stroke-width="0.5"
+              >
+                <circle cx="9" cy="9" r="9" stroke="none" />
+                <circle cx="9" cy="9" r="8.75" fill="none" />
+              </g>
+              <g
+                id="Minimise"
+                transform="translate(29)"
+                fill="#ffc12f"
+                stroke="#dfa023"
+                stroke-miterlimit="10"
+                stroke-width="0.5"
+              >
+                <circle cx="9" cy="9" r="9" stroke="none" />
+                <circle cx="9" cy="9" r="8.75" fill="none" />
+              </g>
+              <g
+                id="Close"
+                fill="#ff6157"
+                stroke="#e24640"
+                stroke-miterlimit="10"
+                stroke-width="0.5"
+              >
+                <circle cx="9" cy="9" r="9" stroke="none" />
+                <circle cx="9" cy="9" r="8.75" fill="none" />
+              </g>
+            </svg>
+          </div>
+          <div
+            class="bulb position-absolute align-middle"
+            style="
+              z-index: 99;
+              top: 40%;
+              left: 65%;
+              transform: translate(-0%, -70%);
+            "
+          >
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+            <lottie-player
+              src="https://assets10.lottiefiles.com/private_files/lf30_AzXsOC.json"
+              background="transparent"
+              speed="1"
+              style="width: 300px; height: 300px"
+              loop
+              autoplay
+            ></lottie-player>
+          </div>
+          <div
+            class="top-bars d-grid gap-4 position-absolute mt-5"
+            style="
+              z-index: 99;
+              top: 60%;
+              left: 58%;
+              transform: translate(-0%, -70%);
+            "
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="285"
+              height="8"
+              viewBox="0 0 285 8"
+            >
+              <rect
+                id="Rectangle_2"
+                data-name="Rectangle 2"
+                width="285"
+                height="8"
+                rx="4"
+                fill="rgba(204,204,204,0.5)"
+              />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="354"
+              height="8"
+              viewBox="0 0 354 8"
+            >
+              <rect
+                id="Rectangle_3"
+                data-name="Rectangle 3"
+                width="354"
+                height="8"
+                rx="4"
+                fill="rgba(204,204,204,0.5)"
+              />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="314"
+              height="8"
+              viewBox="0 0 314 8"
+            >
+              <rect
+                id="Rectangle_4"
+                data-name="Rectangle 4"
+                width="314"
+                height="8"
+                rx="4"
+                fill="rgba(204,204,204,0.5)"
+              />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="242"
+              height="8"
+              viewBox="0 0 242 8"
+            >
+              <rect
+                id="Rectangle_7"
+                data-name="Rectangle 7"
+                width="242"
+                height="8"
+                rx="4"
+                fill="rgba(204,204,204,0.5)"
+              />
+            </svg>
+          </div>
+          <div
+            class="bottom-bars position-absolute mt-5"
+            style="
+              z-index: 99;
+              top: 80%;
+              left: 58%;
+              transform: translate(-0%, -70%);
+            "
+          >
+            <svg
+              class="me-5"
+              xmlns="http://www.w3.org/2000/svg"
+              width="124"
+              height="8"
+              viewBox="0 0 124 8"
+            >
+              <rect
+                id="Rectangle_5"
+                data-name="Rectangle 5"
+                width="124"
+                height="8"
+                rx="4"
+                fill="rgba(204,204,204,0.5)"
+              />
+            </svg>
+            <svg
+              class="ms-5"
+              style="position: relative; left: 99%"
+              xmlns="http://www.w3.org/2000/svg"
+              width="50"
+              height="8"
+              viewBox="0 0 50 8"
+            >
+              <rect
+                id="Rectangle_6"
+                data-name="Rectangle 6"
+                width="50"
+                height="8"
+                rx="4"
+                fill="rgba(204,204,204,0.5)"
+              />
+            </svg>
+          </div>
+          <div class="browser"></div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid position-absolute mt-5" style="top: 100%">
+      <div class="row justify-content-md-center">
+        <h2 class="display-2 fw-bold text-center">My Work</h2>
+      </div>
+      <div class="row justify-content-md-center">
+        <div class="col col-6">
+          <div
+            id="carouselExampleCaptions"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide-to="3"
+                aria-label="Slide 4"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide-to="4"
+                aria-label="Slide 5"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide-to="5"
+                aria-label="Slide 6"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide-to="6"
+                aria-label="Slide 7"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide-to="7"
+                aria-label="Slide 8"
+              ></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="abqrah1.png" class="d-block w-100" alt="Abqrah" />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>
+                    <a href="http://www.abqrah.com" class="text-dark bg-warning"
+                      >Abqrah</a
+                    >
+                  </h5>
+                  <p class="lead text-dark">Graduation project</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="nl-blog.png" class="d-block w-100" alt="blog" />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>
+                    <a
+                      href="https://nlf-blog.herokuapp.com"
+                      class="text-dark bg-warning"
+                      >N&L's friends blog</a
+                    >
+                  </h5>
+                  <p class="lead text-dark">COOP project</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="ctf-story.png"
+                  class="d-block w-100"
+                  alt="ctf-story"
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>
+                    <a
+                      href="https://ctf-fullstory.herokuapp.com"
+                      class="text-dark bg-warning"
+                      >UHB CTF full story</a
+                    >
+                  </h5>
+                  <p class="lead text-dark">
+                    a web page that is developed for CTF Competition in UHB
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="ctf-login.png"
+                  class="d-block w-100"
+                  alt="ctf-login"
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>
+                    <a
+                      href="https://covid-ctf.herokuapp.com"
+                      class="text-dark bg-warning"
+                      >UHB CTF sql Injection login</a
+                    >
+                  </h5>
+                  <p class="lead text-dark">
+                    a web page that is developed for CTF Competition in UHB
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="calculator.png"
+                  class="d-block w-100"
+                  alt="calculator"
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>
+                    <a
+                      href="https://xnuray98s.github.io/calculator/"
+                      class="text-dark bg-warning"
+                      >Calculator</a
+                    >
+                  </h5>
+                  <p class="lead text-dark">simple calculator</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="tic-tac-toe.png"
+                  class="d-block w-100"
+                  alt="tic-tac-toe"
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>
+                    <a
+                      href="https://xnuray98s.github.io/tic-tac-toe/"
+                      class="text-dark bg-warning"
+                      >Tic Tac Toe</a
+                    >
+                  </h5>
+                  <p class="lead text-dark">
+                    tic tac toe with minimax algorithm
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="journal.png" class="d-block w-100" alt="journal" />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>
+                    <a
+                      href="https://ctf-uhb.web.app"
+                      class="text-dark bg-warning"
+                      >UHB CTF digital journal</a
+                    >
+                  </h5>
+                  <p class="lead text-dark">
+                    a web page that is developed for CTF Competition in UHB
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="Etch-a-Sketch.png"
+                  class="d-block w-100"
+                  alt="Etch-a-Sketch"
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>
+                    <a
+                      href="https://xnuray98s.github.io/Etch-a-Sketch/"
+                      class="text-dark bg-warning"
+                      >Sketch</a
+                    >
+                  </h5>
+                  <p class="lead text-dark">Game to draw</p>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="circle1"></div>
+      <div id="circle2"></div>
+    </div>
+    <div
+      class="container-fluid position-absolute mt-5 d-grid gap-5"
+      style="left: 0%; top: 250%; width: 105%"
+    >
+      <div class="row justify-content-md-center mb-5">
+        <div class="col col-6">
+          <div class="card text-dark bg-light mb-3" style="max-width: 60rem">
+            <div class="card-header bg-warning text-center" id="contact">
+              <h3 class="display-3">Contact me</h3>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title text-center">
+                please do not hesitate to contact me
+              </h5>
+              <p class="card-text lead text-center">
+                <i class="fas fa-envelope-open-text"></i>
+                nourah.alofasi@outlook.com
+                <br />
+                <i class="fas fa-phone-square-alt"></i> +966557134442
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-5 align-items-end" style="margin-top: 50%">
+        <svg
+          class="waves col"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 24 150 28"
+          preserveAspectRatio="none"
+          shape-rendering="auto"
+        >
+          <defs>
+            <path
+              id="gentle-wave"
+              d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+            />
+          </defs>
+          <g class="parallax">
+            <use xlink:href="#gentle-wave" x="48" y="0" fill="#237a570f" />
+            <use xlink:href="#gentle-wave" x="48" y="3" fill="#0930280f" />
+            <use xlink:href="#gentle-wave" x="48" y="5" fill="#237a570f" />
+            <use xlink:href="#gentle-wave" x="48" y="7" fill="#0930280f" />
+          </g>
+        </svg>
+      </div>
+    </div>
+  </body>
+</html>
